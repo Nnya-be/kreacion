@@ -1,6 +1,9 @@
 # Kreacion
+
 ## Fashion Designers Social Marketplace
+
 Welcome to the Fashion Designers Social Marketplace! This web app is designed to bring together fashion designers and enthusiasts, creating a vibrant community and marketplace for showcasing and selling unique fashion items.
+
 ### ___Table of Contents___
 
     - Introduction
@@ -14,10 +17,11 @@ Welcome to the Fashion Designers Social Marketplace! This web app is designed to
 ### Introduction
 
 The Fashion Designers Social Marketplace is a platform where fashion designers can showcase their latest creations, connect with other designers, and sell their products directly to consumers. It provides a space for fashion enthusiasts to discover new trends, follow their favorite designers, and purchase exclusive fashion items.
+
 ### Features
 
-    ___Designer Profiles___ : Fashion designers can create profiles to showcase their portfolio, share their story, and connect with other designers and customers.
-    ___Product Listings___ : Designers can list their products with detailed descriptions, images, and pricing information.
+    *Designer Profiles* : Fashion designers can create profiles to showcase their portfolio, share their story, and connect with other designers and customers.
+    *Product Listings* : Designers can list their products with detailed descriptions, images, and pricing information.
     ___Social Interaction___ : Users can follow designers, like and comment on products, and share their favorite items on social media.
     ___Marketplace___ : A dedicated marketplace for buying and selling fashion items with secure payment processing.
     ___Search and Filters___ : Advanced search and filtering options to help users find exactly what they're looking for.
@@ -32,6 +36,7 @@ To get started with the Fashion Designers Social Marketplace, follow these steps
     bash
 
 ``` git clone https://github.com/Nnya-be/kreacion.git ```
+
 ```cd kreacion```
 
 #### Install dependencies:
@@ -100,7 +105,3 @@ If you have any questions, suggestions, or feedback, please feel free to contact
 
     Email: solomonchamamme@gmail.com (@Nnya-be)
            amoatengnana99@gmail.com (Amoateng Precious)
-
-
-
-
