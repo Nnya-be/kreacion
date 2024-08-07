@@ -20,12 +20,12 @@ The Fashion Designers Social Marketplace is a platform where fashion designers c
 
 ### Features
 
-    *Designer Profiles* : Fashion designers can create profiles to showcase their portfolio, share their story, and connect with other designers and customers.
-    *Product Listings* : Designers can list their products with detailed descriptions, images, and pricing information.
-    ___Social Interaction___ : Users can follow designers, like and comment on products, and share their favorite items on social media.
-    ___Marketplace___ : A dedicated marketplace for buying and selling fashion items with secure payment processing.
-    ___Search and Filters___ : Advanced search and filtering options to help users find exactly what they're looking for.
-    ___Notifications___ : Stay updated with the latest trends, new product listings, and designer activities.
+    Designer Profiles : Fashion designers can create profiles to showcase their portfolio, share their story, and connect with other designers and customers.
+    Product Listings : Designers can list their products with detailed descriptions, images, and pricing information.
+    Social Interaction : Users can follow designers, like and comment on products, and share their favorite items on social media.
+    Marketplace: A dedicated marketplace for buying and selling fashion items with secure payment processing.
+    Search and Filters : Advanced search and filtering options to help users find exactly what they're looking for.
+    Notifications : Stay updated with the latest trends, new product listings, and designer activities.
 
 ### Installation
 
