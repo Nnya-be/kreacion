@@ -95,16 +95,12 @@ bash
     Create a pull request.
 
 Please make sure to follow the code of conduct in all your interactions with the project.
-License
-
-This project is licensed under the MIT License. See the LICENSE file for more information.
-Contact
 
 If you have any questions, suggestions, or feedback, please feel free to contact us:
 
     Email: solomonchamamme@gmail.com (@Nnya-be)
            amoatengnana99@gmail.com (Amoateng Precious)
-           
+
 
 
 
