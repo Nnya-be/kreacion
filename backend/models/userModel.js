@@ -61,7 +61,12 @@ const userSchema = new mongoose.Schema({
   phoneNumber: {
     type: String,
     trim: true,
-    validate: validator.isMobilePhone,
+    validate: {
+      validator: function (value) {
+        validator.isMobilePhone(value);
+      },
+      message: 'Please provide a valid Phone number!',
+    },
   },
   profilePicture: {
     type: String,
