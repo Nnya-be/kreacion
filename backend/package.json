@@ -8,11 +8,12 @@
     "build": "NODE_ENV=production nodemon server.js",
     "test": "jest server.js",
     "lint": "./node_modules/.bin/eslint",
-    "check-lint": "lint [0-9]*.js"
+    "check-lint": "lint *.js"
   },
   "author": "Solomon Chamamme, Amoah Papa and Amoateng Precious",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^8.1.3",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
@@ -23,6 +24,8 @@
     "mongodb": "^6.8.1",
     "mongoose": "^8.6.1",
     "morgan": "^1.10.0",
+    "nodemailer": "^6.9.15",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "nodemon": "^3.1.4",
     "slugify": "^1.6.6",
     "validator": "^13.12.0"
