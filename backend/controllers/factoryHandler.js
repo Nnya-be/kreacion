@@ -1,6 +1,7 @@
 const catchAsync = require('../utils/catchAsync');
 const APIFeatures = require('../utils/apiFuncHandler');
 const AppError = require('../utils/appError');
+const User = require('../models/userModel');
 
 exports.getDocument = (Model, populate) =>
   catchAsync(async (req, res, next) => {
@@ -25,6 +26,9 @@ exports.getDocument = (Model, populate) =>
 
 exports.createDocument = (Model) =>
   catchAsync(async (req, res, next) => {
+    if (Model == User) {
+      console.log(req.body);
+    }
     // console.log(req.body);
 
     const doc = await Model.create(req.body);
@@ -83,7 +87,6 @@ exports.getAllDocuments = (Model) =>
       .limitFields()
       .paginate();
     const doc = await features.query;
-
 
     res.status(200).json({
       staus: 'success',
