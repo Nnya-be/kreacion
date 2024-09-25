@@ -5,11 +5,13 @@ const postRouter = require('./routes/postRouter');
 const reviewRouter = require('./routes/reviewRouter');
 const replyRouter = require('./routes/replyRouter');
 const authRouter = require('./routes/authRouter');
+
 const app = express();
 
 app.use(express.json());
 
 app.use(errorController);
+
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/posts', postRouter);
