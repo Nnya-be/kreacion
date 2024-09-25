@@ -1,20 +1,24 @@
 // app/routes/login.tsx
 import { Form, useActionData } from '@remix-run/react';
 import { ActionFunction, redirect, json } from '@remix-run/node';
-import { loginUser } from '~/models/user.server';
+import { loginUser } from '../models/user.server';
 
-export let action: ActionFunction = async ({ request }) => {
+type ActionData = {
+  error?: string;
+};
+
+export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
   const email = formData.get('email');
   const password = formData.get('password');
 
   if (typeof email !== 'string' || typeof password !== 'string') {
-    return json({ error: 'Invalid Form Data' }, { status: 400 });
+    return json<ActionData>({ error: 'Invalid Form Data' }, { status: 400 });
   }
 
   const user = await loginUser(email, password);
   if (!user) {
-    return json({ error: 'Invalid login credentials' }, { status: 401 });
+    return json<ActionData>({ error: 'Invalid login credentials' }, { status: 401 });
   }
 
   // Set session and redirect
@@ -22,7 +26,7 @@ export let action: ActionFunction = async ({ request }) => {
 };
 
 export default function LoginPage() {
-  const actionData = useActionData();
+  const actionData = useActionData<ActionData>();
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
