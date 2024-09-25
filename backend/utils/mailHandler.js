@@ -3,16 +3,15 @@ const nodemailer = require('nodemailer');
 const sendgridTransport = require('nodemailer-sendgrid-transport');
 const sendgrid = require('@sendgrid/mail');
 const AppError = require('./appError');
-
-const send = sendgrid.setApiKey(process.env.MAIL_PASSWORD);
-const transpoter = nodemailer.createTransport(
-  sendgridTransport({
-    auth: {
-      // api_user: 'akwasioburo@gmail.com',
-      api_key: process.env.MAIL_KEY,
-    },
-  }),
-);
+const send = sendgrid.setApiKey(process.env.MAIL_KEY);
+// const transpoter = nodemailer.createTransport(
+//   sendgridTransport({
+//     auth: {
+//       // api_user: 'akwasioburo@gmail.com',
+//       api_key: process.env.MAIL_KEY,
+//     },
+//   }),
+// );
 
 // transpoter
 //       .sendMail(options)
