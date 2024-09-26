@@ -5,7 +5,6 @@ const User = require('../models/userModel');
 
 exports.getDocument = (Model, populate) =>
   catchAsync(async (req, res, next) => {
-    console.log(req.params.id);
     let query = Model.findById(req.params.id);
 
     if (populate) {
