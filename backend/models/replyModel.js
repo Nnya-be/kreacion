@@ -1,23 +1,17 @@
 const mongoose = require('mongoose');
 
-const reviewSchema = new mongoose.Schema({
+const replySchema = new mongoose.Schema({
   user: {
     name: {
       type: String,
       required: true,
     },
-    profilePicture: String,
+    profilePic: String,
   },
   content: {
     type: String,
     required: true,
   },
-  replies: [
-    {
-      type: mongoose.Schema.ObjectId,
-      ref: 'Reply',
-    },
-  ],
   likes: [
     {
       type: mongoose.Schema.ObjectId,
@@ -30,6 +24,6 @@ const reviewSchema = new mongoose.Schema({
   },
 });
 
-const Review = mongoose.model('Review', reviewSchema);
+const Reply = mongoose.model('Reply', replySchema);
 
-module.exports = Review;
+module.exports = Reply;

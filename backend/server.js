@@ -1,12 +1,10 @@
 const mongoose = require('mongoose');
-const dotEnv = require('dotenv');
-const app = require('./app');
-const serverErrors = require('./utils/procErrorHandlers');
-
-dotEnv.config({
+const dotenv = require('dotenv');
+dotenv.config({
   path: './config.env',
 });
-
+const app = require('./app');
+const serverErrors = require('./utils/procErrorHandlers');
 process.on('uncaughtException', serverErrors.uncaughtException);
 process.on('unhandledRejection', serverErrors.unhandledRejection);
 process.on('SIGTERM', serverErrors.handleSigterm);
@@ -18,7 +16,7 @@ const dbUrl = process.env.DB_CONNECTION.replace(
 );
 
 mongoose.connect(dbUrl, {
-  serverSelectionTimeoutMS: 5000,
+  serverSelectionTimeoutMS: 10000,
 });
 
 const db = mongoose.connection;

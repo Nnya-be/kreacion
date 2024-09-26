@@ -5,7 +5,6 @@ const User = require('../models/userModel');
 
 exports.getDocument = (Model, populate) =>
   catchAsync(async (req, res, next) => {
-    console.log(req.params.id);
     let query = Model.findById(req.params.id);
 
     if (populate) {
@@ -41,7 +40,7 @@ exports.createDocument = (Model) =>
     });
   });
 
-exports.deleteDocument = (Model) => {
+exports.deleteDocument = (Model) =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.findByIdAndDelete(req.params.id);
 
@@ -54,7 +53,6 @@ exports.deleteDocument = (Model) => {
       data: null,
     });
   });
-};
 
 exports.updateDocument = (Model) =>
   catchAsync(async (req, res, next) => {

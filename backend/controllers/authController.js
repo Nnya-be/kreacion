@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
-const mailHandler = require('../utils/mailHandler');
+const { mailHandler } = require('../utils/mailHandler');
 /**
  * Generate a JSON Web Token (JWT) for a given user ID.
  *
@@ -106,8 +106,18 @@ module.exports.signUp = catchAsync(async (req, res, next) => {
     return next(new AppError('Provide user details!', 401));
   }
 
+  if (!req.body.email || !req.body.username) {
+    return next(new AppError('Provide A Username and Email field!', 401));
+  }
+
   const newUser = await User.create({
     username: req.body.username,
+    fullname: req.body.fullname,
+    bio: req.body.bio,
+    businessName: req.body.businessName,
+    location: req.body.location,
+    yearsOfExperience: req.body.yearsOfExperience,
+    phoneNumber: req.body.phoneNumber,
     email: req.body.email,
     password: req.body.password,
     passwordConfirm: req.body.passwordConfirm,
@@ -361,6 +371,7 @@ module.exports.protect = catchAsync(async (req, res, next) => {
   ) {
     token = req.headers.authorization.split(' ')[1];
   }
+
   /** Checks for the token existance. */
   if (!token) {
     return next(new AppError('Please login to access this route.', 401));
