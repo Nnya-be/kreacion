@@ -1,4 +1,4 @@
-const Reply = require('../models/reviewModel');
+const Reply = require('../models/replyModel');
 const factoryHandler = require('./factoryHandler');
 
 exports.getAllReply = factoryHandler.getAllDocuments(Reply);
