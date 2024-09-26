@@ -1,20 +1,8 @@
-const nodemailer = require('nodemailer');
-// const smtpTransport = require('nodemailer-smtp-transport');
-const sendgridTransport = require('nodemailer-sendgrid-transport');
 const sendgrid = require('@sendgrid/mail');
 const AppError = require('./appError');
-const send = sendgrid.setApiKey(process.env.MAIL_KEY);
-// const transpoter = nodemailer.createTransport(
-//   sendgridTransport({
-//     auth: {
-//       // api_user: 'akwasioburo@gmail.com',
-//       api_key: process.env.MAIL_KEY,
-//     },
-//   }),
-// );
 
-// transpoter
-//       .sendMail(options)
+const send = sendgrid.setApiKey(process.env.MAIL_KEY);
+
 module.exports.mailHandler = async (options) => {
   try {
     await send
@@ -29,3 +17,4 @@ module.exports.mailHandler = async (options) => {
     console.error('Error occured while sendin mail', error);
   }
 };
+

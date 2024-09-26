@@ -16,7 +16,7 @@ const dbUrl = process.env.DB_CONNECTION.replace(
 );
 
 mongoose.connect(dbUrl, {
-  serverSelectionTimeoutMS: 5000,
+  serverSelectionTimeoutMS: 10000,
 });
 
 const db = mongoose.connection;
