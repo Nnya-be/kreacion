@@ -4,7 +4,7 @@ const reviewRouter = require('./reviewRouter');
 
 const router = express.Router();
 
-router.use('/:post_id/reviews', reviewRouter);
+// router.use('/:post_id/reviews', reviewRouter);
 router
   .route('/')
   .get(postController.getAllPosts)
@@ -17,3 +17,4 @@ router
   .delete(postController.deletePost);
 
 module.exports = router;
+
