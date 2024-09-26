@@ -1,3 +1,29 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Define the custom variables for colors in the base layer */
+@layer base {
+  :root {
+    --background: #f9fafb; /* Replace with your desired background color */
+    --foreground: #111827; /* Replace with your desired text color */
+    --border-color: #d1d5db; /* Replace with your desired border color */
+  }
+
+  .dark {
+    --background: #1f2937; /* Dark mode background color */
+    --foreground: #f9fafb; /* Dark mode text color */
+    --border-color: #4b5563; /* Dark mode border color */
+  }
+}
+
+/* Define custom utility classes */
+@layer utilities {
+  .border-border {
+    @apply border var(--border-color); /* Use the defined border color variable */
+  }
+
+  /* Apply the background and text color based on the defined variables */
+  
+}

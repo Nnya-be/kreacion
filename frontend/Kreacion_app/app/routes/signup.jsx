@@ -1,158 +1,83 @@
-// import { Link } from "@remix-run/react"
-
-// const Signup = () => {
-//   return(
-
-// <div className="overflow-x-hidden bg-gray-50">
-//     <header className="relative py-4 md:py-6">
-//         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-//             <div className="relative flex items-center justify-between">
-//                 <div className="flex-shrink-0">
-//                     <Link href="#" title="" className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
-//                         <img className="w-auto h-8" src="https://d33wubrfki0l68.cloudfront.net/682a555ec15382f2c6e7457ca1ef48d8dbb179ac/f8cd3/images/logo.svg" alt="" />
-//                     </Link>
-//                 </div>
-
-//                 <div className="flex lg:hidden">
-//                     <button type="button" className="text-gray-900">
-//                         <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
-//                         </svg>
-//                     </button>
-//                 </div>
-
-//                 <div className="hidden lg:absolute lg:inset-y-0 lg:flex lg:items-center lg:justify-center lg:space-x-12 lg:-translate-x-1/2 lg:left-1/2">
-//                     <Link href='#' title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Experts </Link>
-
-//                     <Link href='#'title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Community Groups </Link>
-
-//                     <Link href="#" title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Support </Link>
-//                 </div>
-
-//                 <div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-10">
-//                     <Link href="#" title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Login </Link>
-
-//                     <Link
-//                         href="#"
-//                         title=""
-//                         className="px-5 py-2 text-base font-semibold leading-7 text-gray-900 transition-all duration-200 bg-transparent border border-gray-900 rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-900 hover:text-white focus:bg-gray-900 focus:text-white"
-//                         role="button"
-//                     >
-//                         Join community
-//                     </Link>
-//                 </div>
-//             </div>
-//         </div>
-//     </header>
-
-//     <section className="relative py-12 sm:py-16 lg:pt-20 xl:pb-0">
-//         <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-//             <div className="max-w-3xl mx-auto text-center">
-//                 <p className="inline-flex px-4 py-2 text-base text-gray-900 border border-gray-200 rounded-full font-pj">Made by Developers, for Developers</p>
-//                 <h1 className="mt-5 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-pj">Quality resources shared by the community</h1>
-//                 <p className="max-w-md mx-auto mt-6 text-base leading-7 text-gray-600 font-inter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula massa in enim luctus. Rutrum arcu.</p>
-
-//                 <div className="relative inline-flex mt-10 group">
-//                     <div className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
-
-//                     <Link href="#" title="" className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900" role="button">
-//                         Get access to 4,958 resources
-//                     </Link>
-//                 </div>
-//             </div>
-//         </div>
-
-//         <div className="mt-16 md:mt-20">
-//             <img className="object-cover object-top w-full h-auto mx-auto scale-150 2xl:max-w-screen-2xl xl:scale-100" src="https://d33wubrfki0l68.cloudfront.net/54780decfb9574945bc873b582cdc6156144a2ba/d9fa1/images/hero/4/illustration.png" alt="" />
-//         </div>
-//     </section>
-// </div>
-//     )
-// };
-
-// export default Signup
-import { useState } from 'react';
-import { useNavigation, Form } from '@remix-run/react';
-import { redirect } from '@remix-run/node';
-
-export const action = async ({ request }) => {
-  const formData = await request.formData();
-  const username = formData.get('username');
-  const email = formData.get('email');
-  const password = formData.get('password');
-
-  // Here you would normally create the user in your database
-  console.log({ username, email, password });
-
-  // Redirect to the home page after sign up
-  return redirect('/');
-};
-
+import { Link } from "@remix-run/react";
 
 export default function Signup() {
-  const navigation = useNavigation();
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
   return (
-    <div className="container font-mono mx-auto mt-10">
-      <h1 className="text-3xl font-bold mb-5">Sign Up</h1>
-      <Form method="post" className="space-y-4">
-        <div>
-          <label htmlFor="username" className="block text-lg">
-            Username
-          </label>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            value={formData.username}
-            onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded"
-          />
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6">
+        <h2 className="text-2xl font-semibold text-gray-700 text-center">Create an Account</h2>
+        <p className="text-sm text-gray-600 text-center mt-2 mb-4">
+          Already have an account? <Link to="/login" className="text-blue-500 hover:underline">Log in</Link>
+        </p>
+        
+        <form method="post" className="space-y-4">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-gray-700 focus:ring-blue-500 focus:border-blue-500"
+              required
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-gray-700 focus:ring-blue-500 focus:border-blue-500"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-gray-700 focus:ring-blue-500 focus:border-blue-500"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-gray-700 focus:ring-blue-500 focus:border-blue-500"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Sign Up
+          </button>
+        </form>
+
+        <div className="mt-4 text-center">
+          <p className="text-sm text-gray-600">
+            Or sign up with:
+          </p>
+          <div className="flex justify-center mt-2 space-x-4">
+            <button className="flex items-center px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-50">
+              <img src="/icons/google.svg" alt="Google" className="w-5 h-5 mr-2" />
+              Google
+            </button>
+            <button className="flex items-center px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-50">
+              <img src="/icons/github.svg" alt="GitHub" className="w-5 h-5 mr-2" />
+              GitHub
+            </button>
+          </div>
         </div>
-        <div>
-          <label htmlFor="email" className="block text-lg">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded"
-          />
-        </div>
-        <div>
-          <label htmlFor="password" className="block text-lg">
-            Password
-          </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            value={formData.password}
-            onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded"
-          />
-        </div>
-        <button
-          type="submit"
-          className={`mt-4 w-full p-2 text-white bg-blue-500 rounded ${navigation.state === 'submitting' ? 'opacity-50' : ''}`}
-          disabled={navigation.state === 'submitting'}
-        >
-          {navigation.state === 'submitting' ? 'Signing Up...' : 'Sign Up'}
-        </button>
-      </Form>
+      </div>
     </div>
   );
 }
