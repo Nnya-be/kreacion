@@ -1,7 +1,7 @@
 const express = require('express');
 const reveiwController = require('../controllers/reviewsController');
 
-const router = express.Router({ mergeParams: true });
+const router = express.Router();
 
 router
   .route('/')
