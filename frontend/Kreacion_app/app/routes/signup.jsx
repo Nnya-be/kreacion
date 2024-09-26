@@ -2,8 +2,21 @@ import { Link } from "@remix-run/react";
 
 export default function Signup() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6">
+    <div className="relative min-h-screen flex items-center justify-center bg-gray-100">
+      {/* Blob Animation */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="blob bg-gradient-to-r from-blue-400 via-purple-300 to-purple-500 opacity-30 absolute w-72 h-72 rounded-full top-20 left-10 animate-blob"></div>
+        <div className="blob bg-gradient-to-r from-yellow-400 via-red-300 to-pink-500 opacity-30 absolute w-72 h-72 rounded-full top-1/2 right-10 animate-blob animation-delay-2000"></div>
+        <div className="blob bg-gradient-to-r from-green-300 via-blue-300 to-indigo-400 opacity-30 absolute w-96 h-96 rounded-full bottom-10 left-1/3 animate-blob animation-delay-4000"></div>
+      </div>
+
+      {/* App Name */}
+      <div className="absolute top-6 left-6 text-2xl font-bold text-blue-600">
+        Kreacion
+      </div>
+
+      {/* Sign-Up Form */}
+      <div className="relative z-10 w-full max-w-md bg-white shadow-md rounded-lg p-6">
         <h2 className="text-2xl font-semibold text-gray-700 text-center">Create an Account</h2>
         <p className="text-sm text-gray-600 text-center mt-2 mb-4">
           Already have an account? <Link to="/login" className="text-blue-500 hover:underline">Log in</Link>
