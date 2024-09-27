@@ -125,8 +125,8 @@ const Advantages = (): JSX.Element => {
             fontWeight: 700,
           }}
         >
-          Creating remarkable opportunity for tech companies to exhibit at
-          Italy's financial capital Milan.
+          Creating remarkable opportunity for Fashion cloth lines and companies to exhibit their
+          unique designs and apparels.
         </Typography>
         <Typography
           variant="h6"
