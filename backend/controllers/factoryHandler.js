@@ -25,9 +25,10 @@ exports.getDocument = (Model, populate) =>
 
 exports.createDocument = (Model) =>
   catchAsync(async (req, res, next) => {
-    if (Model == User) {
-      console.log(req.body);
-    }
+    // if (Model == User) {
+    //   console.log(req.body);
+    // }
+
     // console.log(req.body);
 
     const doc = await Model.create(req.body);
