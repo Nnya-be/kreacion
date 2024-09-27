@@ -1,8 +1,8 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
+// import Button from '@mui/material/Button';
+// import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 // import { useTheme } from '@mui/material/styles';
 
@@ -38,7 +38,7 @@ const Footer = (): JSX.Element => {
               width={1}
             /> */}
           </Box>
-          <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
+          {/* <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
             <Box marginTop={1} marginRight={2}>
               <Link
                 underline="none"
@@ -74,7 +74,7 @@ const Footer = (): JSX.Element => {
                 Purchase now
               </Button>
             </Box>
-          </Box>
+          </Box> */}
         </Box>
       </Grid>
       <Grid item xs={12}>

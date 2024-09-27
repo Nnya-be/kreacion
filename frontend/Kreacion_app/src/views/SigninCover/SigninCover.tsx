@@ -85,7 +85,7 @@ const SigninCover = (): JSX.Element => {
                         component={'img'}
                         loading="lazy"
                         src={
-                          'https://assets.maccarianagency.com/backgrounds/img18.jpg'
+                          'https://media.istockphoto.com/id/1083251186/photo/smiling-young-woman-in-a-fashion-factory.webp?a=1&b=1&s=612x612&w=0&k=20&c=g5JOjlJQRciottYFyh4Rex2QliRM7S7s-E31teunTAM='
                         }
                         height={{ xs: 'auto', md: 1 }}
                         maxHeight={{ xs: 300, md: 1 }}

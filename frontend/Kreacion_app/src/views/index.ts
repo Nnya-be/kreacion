@@ -40,7 +40,6 @@ export { default as BlogArticle } from './BlogArticle';
 export { default as BlogReachView } from './BlogReachView';
 export { default as PasswordResetCover } from './PasswordResetCover';
 export { default as PasswordResetSimple } from './PasswordResetSimple';
-export { default as SigninSimple } from './SigninSimple';
 export { default as SigninCover } from './SigninCover';
 export { default as SignupSimple } from './SignupSimple';
 export { default as SignupCover } from './SignupCover';

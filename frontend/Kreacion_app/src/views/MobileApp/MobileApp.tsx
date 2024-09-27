@@ -1,7 +1,9 @@
 import React from 'react';
 import { alpha, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 import {
@@ -9,12 +11,16 @@ import {
   About,
   Features,
   Payment,
-  Pricings,
+  SidebarArticles,
   Download,
+  LatestStories,
 } from './components';
 
 const MobileApp = (): JSX.Element => {
   const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+    defaultMatches: true,
+  });
 
   return (
     <Main>
@@ -84,7 +90,16 @@ const MobileApp = (): JSX.Element => {
       </Container>
       <Box position={'relative'} bgcolor={'alternate.main'}>
         <Container>
-          <Pricings />
+          <Grid container spacing={isMd ? 4 : 2}>
+            <Grid item xs={12} md={8}>
+              <LatestStories />
+            </Grid>
+            { isMd ? (
+              <Grid item xs={12} md={4}>
+                <SidebarArticles />
+              </Grid>
+            ) : null }
+          </Grid>
         </Container>
         <Box
           component={'svg'}

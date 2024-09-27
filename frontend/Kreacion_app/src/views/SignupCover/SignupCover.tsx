@@ -85,7 +85,7 @@ const SignupCover = (): JSX.Element => {
                         component={'img'}
                         loading="lazy"
                         src={
-                          'https://assets.maccarianagency.com/backgrounds/img4.jpg'
+                          'https://media.istockphoto.com/id/1465634394/photo/african-dressmaking-entrepreneur.webp?a=1&b=1&s=612x612&w=0&k=20&c=0YAY3hiVSoL0REuh5B53I-rODlo1TmovkVjd8pC4OQI='
                         }
                         height={{ xs: 'auto', md: 1 }}
                         maxHeight={{ xs: 300, md: 1 }}

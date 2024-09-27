@@ -86,7 +86,7 @@ const About = (): JSX.Element => {
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="text.secondary">
-              Don't listen to what they say go and see. Network with like minds and market with stakeholders on our app
+              Don't be left out. Network with like minds and market with stakeholders on our app
              . Join our community of fashion designers.
             </Typography>
           </Box>
