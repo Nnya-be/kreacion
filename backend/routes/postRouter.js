@@ -4,7 +4,7 @@ const reviewRouter = require('./reviewRouter');
 
 const router = express.Router();
 
-router.use('/:post_id/reviews', reviewRouter);
+router.use('/:postId/reviews', reviewRouter);
 router
   .route('/')
   .get(postController.getAllPosts)
