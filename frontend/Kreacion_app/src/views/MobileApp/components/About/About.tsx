@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+// /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -51,8 +51,8 @@ const About = (): JSX.Element => {
                   loading="lazy"
                   src={
                     theme.palette.mode === 'light'
-                      ? 'https://assets.maccarianagency.com/screenshots/crypto-mobile.png'
-                      : 'https://assets.maccarianagency.com/screenshots/crypto-mobile--dark.png'
+                      ? 'https://media.istockphoto.com/id/1606981069/photo/young-african-business-owner-woman-prepare-parcel-box-and-standing-check-online-orders-for.jpg?s=612x612&w=0&k=20&c=2i2y2dGLRU7y1nyBGREHfOv74rYTBSFIsL8L_dP697U='
+                      : 'https://media.istockphoto.com/id/1606981069/photo/young-african-business-owner-woman-prepare-parcel-box-and-standing-check-online-orders-for.jpg?s=612x612&w=0&k=20&c=2i2y2dGLRU7y1nyBGREHfOv74rYTBSFIsL8L_dP697U='
                   }
                   alt="Image Description"
                   width={1}
@@ -86,8 +86,8 @@ const About = (): JSX.Element => {
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="text.secondary">
-              Don't listen to what they say go and see. Travelling with our app
-              is easy. Join the biggest community of travellers.
+              Don't listen to what they say go and see. Network with like minds and market with stakeholders on our app
+             . Join our community of fashion designers.
             </Typography>
           </Box>
           <Box display="flex" marginTop={1}>
@@ -131,7 +131,7 @@ const About = (): JSX.Element => {
             maxWidth={{ xs: '100%', sm: 400 }}
             marginTop={3}
           >
-            <Box
+            {/* <Box
               component={'iframe'}
               title="video"
               width="100%"
@@ -142,7 +142,7 @@ const About = (): JSX.Element => {
               allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
               boxShadow={4}
               borderRadius={2}
-            />
+            /> */}
           </Box>
         </Box>
       </Grid>

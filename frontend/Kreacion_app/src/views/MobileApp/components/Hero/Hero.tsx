@@ -127,8 +127,8 @@ const Hero = (): JSX.Element => {
                   component={'img'}
                   src={
                     theme.palette.mode === 'light'
-                      ? 'https://assets.maccarianagency.com/screenshots/crypto-mobile.png'
-                      : 'https://assets.maccarianagency.com/screenshots/crypto-mobile--dark.png'
+                      ? 'https://media.istockphoto.com/id/1847923360/photo/happy-woman-fashion-designer-and-tablet-in-logistics-or-small-business-management-at-boutique.jpg?s=2048x2048&w=is&k=20&c=N_eZ0DGfLTd_Sq85owgLYpHh8PRPsFJnTpIrZXcfh58='
+                      : 'https://media.istockphoto.com/id/1847923360/photo/happy-woman-fashion-designer-and-tablet-in-logistics-or-small-business-management-at-boutique.jpg?s=2048x2048&w=is&k=20&c=N_eZ0DGfLTd_Sq85owgLYpHh8PRPsFJnTpIrZXcfh58='
                   }
                   loading={'lazy'}
                   width={1}

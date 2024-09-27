@@ -57,7 +57,7 @@ import {
 
 const routes = [
   {
-    path: '/mobile-app',
+    path: '/',
     renderer: (params = {}): JSX.Element => <MobileAppView {...params} />,
   },
   {

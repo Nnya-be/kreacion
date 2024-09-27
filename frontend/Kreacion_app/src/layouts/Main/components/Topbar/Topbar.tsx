@@ -11,11 +11,11 @@ interface Props {
   onSidebarOpen: () => void;
   pages: {
     landings: Array<PageItem>;
-    company: Array<PageItem>;
-    account: Array<PageItem>;
-    secondary: Array<PageItem>;
-    blog: Array<PageItem>;
-    portfolio: Array<PageItem>;
+    // company: Array<PageItem>;
+    // account: Array<PageItem>;
+    // secondary: Array<PageItem>;
+    // blog: Array<PageItem>;
+    // portfolio: Array<PageItem>;
   };
   colorInvert?: boolean;
 }
@@ -29,11 +29,11 @@ const Topbar = ({
   const { mode } = theme.palette;
   const {
     landings: landingPages,
-    secondary: secondaryPages,
-    company: companyPages,
-    account: accountPages,
-    portfolio: portfolioPages,
-    blog: blogPages,
+  //   // secondary: secondaryPages,
+  //   // company: companyPages,
+  //   // account: accountPages,
+  //   // portfolio: portfolioPages,
+  //   // blog: blogPages,
   } = pages;
 
   return (
@@ -70,46 +70,46 @@ const Topbar = ({
             colorInvert={colorInvert}
           />
         </Box>
-        <Box marginLeft={4}>
+        {/* <Box marginLeft={4}>
           <NavItem
             title={'Company'}
             id={'company-pages'}
             items={companyPages}
             colorInvert={colorInvert}
           />
-        </Box>
-        <Box marginLeft={4}>
+        </Box> */}
+        {/* <Box marginLeft={4}>
           <NavItem
             title={'Account'}
             id={'account-pages'}
             items={accountPages}
             colorInvert={colorInvert}
           />
-        </Box>
-        <Box marginLeft={4}>
+        </Box> */}
+        {/* <Box marginLeft={4}>
           <NavItem
             title={'Pages'}
             id={'secondary-pages'}
             items={secondaryPages}
             colorInvert={colorInvert}
           />
-        </Box>
-        <Box marginLeft={4}>
+        </Box> */}
+        {/* <Box marginLeft={4}>
           <NavItem
             title={'Blog'}
             id={'blog-pages'}
             items={blogPages}
             colorInvert={colorInvert}
           />
-        </Box>
-        <Box marginLeft={4}>
+        </Box> */}
+        {/* <Box marginLeft={4}>
           <NavItem
             title={'Portfolio'}
             id={'portfolio-pages'}
             items={portfolioPages}
             colorInvert={colorInvert}
           />
-        </Box>
+        </Box> */}
         <Box marginLeft={4}>
           <Button
             variant="contained"
@@ -129,7 +129,7 @@ const Topbar = ({
             color="primary"
             component="a"
             target="blank"
-            href="/"
+            href="/signin-simple"
             size="large"
           >
             Log In
