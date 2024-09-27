@@ -24,10 +24,10 @@ const postSchema = new mongoose.Schema({
     },
     profilePicture: String,
   },
-  comments: [
+  reviews: [
     {
       type: mongoose.Schema.ObjectId,
-      ref: 'Comment',
+      ref: 'Review',
     },
   ],
   likes: [
