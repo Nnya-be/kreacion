@@ -9,13 +9,13 @@ exports.getAllReviews = factoryHandler.getAllDocuments(Review);
 exports.getReview = factoryHandler.getDocument(Review);
 exports.deleteReview = factoryHandler.deleteDocument(Review);
 exports.reviewPost = catchAsync(async (req, res, next) => {
-  const postId = req.params.post_id;
+  const { postId } = req.params;
 
   if (!postId) {
     return next(new AppError('Please provide a post id!', 400));
   }
 
-  let postDoc = await Post.findById(postId);
+  const postDoc = await Post.findById(postId);
   if (!postDoc) {
     return next(new AppError('No Document found with the Id', 404));
   }
@@ -23,10 +23,11 @@ exports.reviewPost = catchAsync(async (req, res, next) => {
 
   postDoc.reviews.push(reviewDoc.id);
   await postDoc.save({ validateBeforeSave: false });
-  console.log(postDoc);
 
   res.status(201).json({
     status: 'success',
-    reviewDoc,
+    data: {
+      reviewDoc,
+    },
   });
 });
