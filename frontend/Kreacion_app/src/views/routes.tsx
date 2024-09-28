@@ -52,6 +52,7 @@ import {
   AccountSecurity as AccountSecurityView,
   NotFound as NotFoundView,
   NotFoundCover as NotFoundCoverView,
+  PostFeeds as PostFeeds
 } from 'views';
 
 const routes = [
@@ -274,6 +275,10 @@ const routes = [
   {
     path: '/not-found-cover',
     renderer: (params = {}): JSX.Element => <NotFoundCoverView {...params} />,
+  },
+  {
+    path: '/feeds',
+    renderer: (params = {}): JSX.Element => <PostFeeds {...params} />,
   },
 ];
 
