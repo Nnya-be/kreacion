@@ -277,7 +277,7 @@ const routes = [
     renderer: (params = {}): JSX.Element => <NotFoundCoverView {...params} />,
   },
   {
-    path: '/feeds',
+    path: '/post-feeds',
     renderer: (params = {}): JSX.Element => <PostFeeds {...params} />,
   },
 ];
