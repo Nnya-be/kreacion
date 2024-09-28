@@ -1,7 +1,11 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+<<<<<<< HEAD
 // import Button from '@mui/material/Button';
+=======
+import Button from '@mui/material/Button';
+>>>>>>> 5a2870852ba8510448a80f1c5e377a58ad96dd30
 // import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 // import { useTheme } from '@mui/material/styles';
@@ -38,8 +42,13 @@ const Footer = (): JSX.Element => {
               width={1}
             /> */}
           </Box>
+<<<<<<< HEAD
           {/* <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
             <Box marginTop={1} marginRight={2}>
+=======
+          <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
+            {/* <Box marginTop={1} marginRight={2}>
+>>>>>>> 5a2870852ba8510448a80f1c5e377a58ad96dd30
               <Link
                 underline="none"
                 component="a"
@@ -49,8 +58,8 @@ const Footer = (): JSX.Element => {
               >
                 Home
               </Link>
-            </Box>
-            <Box marginTop={1} marginRight={2}>
+            </Box> */}
+            {/* <Box marginTop={1} marginRight={2}>
               <Link
                 underline="none"
                 component="a"
@@ -61,17 +70,17 @@ const Footer = (): JSX.Element => {
               >
                 Documentation
               </Link>
-            </Box>
+            </Box> */}
             <Box marginTop={1}>
               <Button
                 variant="outlined"
                 color="primary"
                 component="a"
                 target="blank"
-                href="https://mui.com/store/items/the-front-landing-page/"
+                href="/"
                 size="small"
               >
-                Purchase now
+                Home
               </Button>
             </Box>
           </Box> */}
