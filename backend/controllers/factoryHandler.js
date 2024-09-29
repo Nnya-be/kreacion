@@ -1,7 +1,9 @@
 const catchAsync = require('../utils/catchAsync');
 const APIFeatures = require('../utils/apiFuncHandler');
 const AppError = require('../utils/appError');
-const User = require('../models/userModel');
+const Post = require('../models/postModel');
+const Review = require('../models/reviewModel');
+const Reply = require('../models/replyModel');
 
 exports.getDocument = (Model, populate) =>
   catchAsync(async (req, res, next) => {
@@ -25,14 +27,54 @@ exports.getDocument = (Model, populate) =>
 
 exports.createDocument = (Model) =>
   catchAsync(async (req, res, next) => {
-    // if (Model == User) {
-    //   console.log(req.body);
-    // }
+    let doc;
 
-    // console.log(req.body);
+    if (!req.body) {
+      return next(new AppError('Please provide contents!'), 400);
+    }
 
-    const doc = await Model.create(req.body);
+    if (Model === Reply) {
+      if (!req.params || !req.body) {
+        return next(new AppError('Provide the fields for the reply!', 400));
+      }
+      const { postId, reviewId } = req.params;
+      if (!postId || !reviewId) {
+        return next(new AppError('Missing Id for documents', 400));
+      }
 
+      const postDoc = await Post.findById(postId);
+      const reviewDoc = await Review.findById(reviewId);
+
+      if (!postDoc || !reviewDoc) {
+        return next(
+          new AppError('No Document found for the Id provided!', 404),
+        );
+      }
+
+      if (!postDoc.reviews.includes(reviewDoc.id)) {
+        return next(new AppError('Wrong Id provided!', 400));
+      }
+      doc = await Reply.create(req.body);
+
+      reviewDoc.replies.push(doc.id);
+      await reviewDoc.save({ validateBeforeSave: false });
+    } else if (Model === Review) {
+      const { postId } = req.params;
+      // console.log(postId);
+      if (!postId) {
+        return next(new AppError('Please provide a post id!', 400));
+      }
+
+      const postDoc = await Post.findById(postId);
+      if (!postDoc) {
+        return next(new AppError('No Document found with the Id', 404));
+      }
+      doc = await Model.create(req.body);
+      postDoc.reviews.push(doc.id);
+      await postDoc.save({ validateBeforeSave: false });
+    } else {
+      doc = await Model.create(req.body);
+    }
     res.status(201).json({
       status: 'success',
       data: {

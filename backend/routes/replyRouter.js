@@ -11,6 +11,6 @@ router
 router
   .route('/:id')
   .get(replyController.getReply)
+  .patch(replyController.updateReply)
   .delete(replyController.deleteReply);
 module.exports = router;
-
