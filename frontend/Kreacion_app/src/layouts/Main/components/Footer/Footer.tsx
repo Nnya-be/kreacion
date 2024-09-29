@@ -1,15 +1,10 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-// import Link from '@mui/material/Link';
+// import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-// import { useTheme } from '@mui/material/styles';
 
 const Footer = (): JSX.Element => {
-  // const theme = useTheme();
-  // const { mode } = theme.palette;
-
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
@@ -27,41 +22,15 @@ const Footer = (): JSX.Element => {
             title="Kreacion"
             width={80}
           >
+            {/* You can add an image or logo here */}
             {/* <Box
               component={'img'}
-              src={
-                mode === 'light'
-                  ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                  : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-              }
+              src="path/to/logo.svg"
               height={1}
               width={1}
             /> */}
           </Box>
-          <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
-            {/* <Box marginTop={1} marginRight={2}>
-              <Link
-                underline="none"
-                component="a"
-                href="/"
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                Home
-              </Link>
-            </Box> */}
-            {/* <Box marginTop={1} marginRight={2}>
-              <Link
-                underline="none"
-                component="a"
-                href="https://thefront.maccarianagency.com/docs/introduction"
-                target={'blank'}
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                Documentation
-              </Link>
-            </Box> */}
+          {/* <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
             <Box marginTop={1}>
               <Button
                 variant="outlined"
@@ -74,7 +43,7 @@ const Footer = (): JSX.Element => {
                 Home
               </Button>
             </Box>
-          </Box>
+          </Box> */}
         </Box>
       </Grid>
       <Grid item xs={12}>

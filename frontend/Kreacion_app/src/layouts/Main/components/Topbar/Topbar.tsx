@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import Kreacion from '../../../../svg/Kreacion.svg'; // Correct SVG import
+import Kreacion from '../../../../svg/kreacion_1.png'; // Correct SVG import
 
 import { NavItem } from './components';
 
@@ -116,7 +116,7 @@ const Topbar = ({
             color="primary"
             component="a"
             target="blank"
-            href="/signup-simple"
+            href="/signup-cover"
             size="large"
           >
             Sign Up
@@ -129,7 +129,7 @@ const Topbar = ({
             color="primary"
             component="a"
             target="blank"
-            href="/signin-simple"
+            href="/signin-cover"
             size="large"
           >
             Log In

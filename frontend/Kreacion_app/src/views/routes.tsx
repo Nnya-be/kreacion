@@ -43,7 +43,6 @@ import {
   BlogReachView as BlogReachViewView,
   PasswordResetCover as PasswordResetCoverView,
   PasswordResetSimple as PasswordResetSimpleView,
-  SigninSimple as SigninSimpleView,
   SigninCover as SigninCoverView,
   SignupSimple as SignupSimpleView,
   SignupCover as SignupCoverView,
@@ -53,6 +52,7 @@ import {
   AccountSecurity as AccountSecurityView,
   NotFound as NotFoundView,
   NotFoundCover as NotFoundCoverView,
+  PostFeeds as PostFeeds
 } from 'views';
 
 const routes = [
@@ -239,10 +239,6 @@ const routes = [
     ),
   },
   {
-    path: '/signin-simple',
-    renderer: (params = {}): JSX.Element => <SigninSimpleView {...params} />,
-  },
-  {
     path: '/signin-cover',
     renderer: (params = {}): JSX.Element => <SigninCoverView {...params} />,
   },
@@ -279,6 +275,10 @@ const routes = [
   {
     path: '/not-found-cover',
     renderer: (params = {}): JSX.Element => <NotFoundCoverView {...params} />,
+  },
+  {
+    path: '/post-feeds',
+    renderer: (params = {}): JSX.Element => <PostFeeds {...params} />,
   },
 ];
 

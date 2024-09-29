@@ -7,11 +7,12 @@ router.use('/:reviewId/reply', replyRouter);
 router
   .route('/')
   .get(reveiwController.getAllReviews)
-  .post(reveiwController.reviewPost);
+  .post(reveiwController.createReview);
 
 router
   .route('/:id')
   .get(reveiwController.getReview)
+  .patch(reveiwController.updateReview)
   .delete(reveiwController.deleteReview);
 
 module.exports = router;

@@ -85,7 +85,7 @@ const PasswordResetCover = (): JSX.Element => {
                         component={'img'}
                         loading="lazy"
                         src={
-                          'https://assets.maccarianagency.com/backgrounds/img15.jpg'
+                          'https://media.istockphoto.com/id/1455864808/photo/fashion-designer-sketching-dresses-at-her-atelier-using-a-tablet.webp?a=1&b=1&s=612x612&w=0&k=20&c=5jRREQ-fhjp6EpQix4jnlIY_ZKmVi5k6io9EAJ-bg54='
                         }
                         height={{ xs: 'auto', md: 1 }}
                         maxHeight={{ xs: 300, md: 1 }}
