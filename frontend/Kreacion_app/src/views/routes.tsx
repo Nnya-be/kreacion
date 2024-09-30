@@ -61,7 +61,7 @@ const routes = [
     renderer: (params = {}): JSX.Element => <MobileAppView {...params} />,
   },
   {
-    path: '/mobile-app',
+    path: '/kreacion',
     renderer: (params = {}): JSX.Element => <MobileAppView {...params} />,
   },
   {

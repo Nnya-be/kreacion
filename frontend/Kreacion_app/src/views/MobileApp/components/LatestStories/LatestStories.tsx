@@ -11,11 +11,11 @@ import Chip from '@mui/material/Chip';
 
 const mock = [
   {
-    image: 'https://assets.maccarianagency.com/backgrounds/img1.jpg',
+    image: 'https://assets.vogue.com/photos/66f2e9ef6d0aeaf2ce8155cc/1:1/w_640,c_limit/Credit_%20Conor%20Cunningham,%20KHY%20x%20ATLEIN%20for%20Vogue%206%20(1).jpg',
     description:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem',
-    title: 'Eiusmod tempor incididunt',
-    tags: ['UX', 'Design', 'Themes', 'Photography'],
+      'Kylie Jenner unveils her new collaboration with Atlein',
+    title: 'Fashion',
+    tags: ['Culture', 'Design', 'Clothing', 'Photography'],
     author: {
       name: 'Clara Bertoletti',
       avatar: 'https://assets.maccarianagency.com/avatars/img1.jpg',
@@ -36,7 +36,7 @@ const mock = [
   {
     image: 'https://assets.maccarianagency.com/backgrounds/img2.jpg',
     description:
-      'Qui blanditiis praesentium voluptatum deleniti atque corrupti',
+      '',
     title: 'Unde omnis iste natus',
     tags: ['UX', 'Design', 'Themes', 'Photography'],
     author: {
