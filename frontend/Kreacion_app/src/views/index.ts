@@ -50,3 +50,4 @@ export { default as AccountSecurity } from './Account/Security';
 export { default as NotFound } from './NotFound';
 export { default as NotFoundCover } from './NotFoundCover';
 export { default as PostFeeds } from './PostFeeds';
+export { default as RenderFeeds } from './RenderFeeds';
