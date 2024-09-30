@@ -52,7 +52,8 @@ import {
   AccountSecurity as AccountSecurityView,
   NotFound as NotFoundView,
   NotFoundCover as NotFoundCoverView,
-  PostFeeds as PostFeeds
+  PostFeeds as PostFeeds,
+  RenderFeeds as RenderFeeds,
 } from 'views';
 
 const routes = [
@@ -279,6 +280,10 @@ const routes = [
   {
     path: '/post-feeds',
     renderer: (params = {}): JSX.Element => <PostFeeds {...params} />,
+  },
+  {
+    path: '/render-feeds',
+    renderer: (params = {}): JSX.Element => <RenderFeeds {...params} />,
   },
 ];
 
