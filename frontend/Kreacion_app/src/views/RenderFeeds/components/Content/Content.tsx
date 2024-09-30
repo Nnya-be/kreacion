@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import RepeatIcon from '@mui/icons-material/Repeat';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-import ShareIcon from '@mui/icons-material/Share';
+import BookmarkIcon from '@mui/icons-material/Bookmark'; // Save icon
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 
@@ -24,6 +24,9 @@ interface Feed {
     profilePicture: string;
   };
   createdAt: string;
+  likes: string[];
+  reviews: string[];
+  // saves: number;
 }
 
 interface ContentProps {
@@ -38,13 +41,18 @@ const Content: React.FC<ContentProps> = ({ feeds }) => {
           <Card key={index} sx={{ marginBottom: 2 }}>
             <CardContent sx={{ display: 'flex' }}>
               {/* User Avatar and Info */}
-              <Avatar src={feed.author.profilePicture} alt={feed.author.name} sx={{ marginRight: 2 }} />
+              <Avatar
+                src={feed.author.profilePicture}
+                alt={feed.author.name}
+                sx={{ marginRight: 2 }}
+              />
               <Box>
                 <Typography variant="subtitle1" fontWeight={700}>
                   {feed.author.name}
                 </Typography>
                 <Typography variant="caption" color="text.secondary">
-                  {new Date(feed.createdAt).toLocaleDateString()} {new Date(feed.createdAt).toLocaleTimeString()}
+                  {new Date(feed.createdAt).toLocaleDateString()}{' '}
+                  {new Date(feed.createdAt).toLocaleTimeString()}
                 </Typography>
                 <Typography variant="body1" sx={{ marginTop: 1 }}>
                   {feed.caption}
@@ -57,7 +65,11 @@ const Content: React.FC<ContentProps> = ({ feeds }) => {
                         component="img"
                         image={feed.images[0].url}
                         alt={feed.images[0].altText}
-                        sx={{ borderRadius: 2, objectFit: 'cover', maxHeight: 400 }}
+                        sx={{
+                          borderRadius: 2,
+                          objectFit: 'cover',
+                          maxHeight: 400,
+                        }}
                       />
                     </Grid>
                   )}
@@ -69,7 +81,11 @@ const Content: React.FC<ContentProps> = ({ feeds }) => {
                             component="img"
                             image={image.url}
                             alt={image.altText}
-                            sx={{ borderRadius: 2, objectFit: 'cover', maxHeight: 400 }}
+                            sx={{
+                              borderRadius: 2,
+                              objectFit: 'cover',
+                              maxHeight: 400,
+                            }}
                           />
                         </Grid>
                       ))}
@@ -82,7 +98,11 @@ const Content: React.FC<ContentProps> = ({ feeds }) => {
                           component="img"
                           image={feed.images[0].url}
                           alt={feed.images[0].altText}
-                          sx={{ borderRadius: 2, objectFit: 'cover', height: '100%' }}
+                          sx={{
+                            borderRadius: 2,
+                            objectFit: 'cover',
+                            height: '100%',
+                          }}
                         />
                       </Grid>
                       <Grid item xs={6} container spacing={1}>
@@ -92,7 +112,11 @@ const Content: React.FC<ContentProps> = ({ feeds }) => {
                               component="img"
                               image={image.url}
                               alt={image.altText}
-                              sx={{ borderRadius: 2, objectFit: 'cover', maxHeight: 200 }}
+                              sx={{
+                                borderRadius: 2,
+                                objectFit: 'cover',
+                                maxHeight: 200,
+                              }}
                             />
                           </Grid>
                         ))}
@@ -107,7 +131,11 @@ const Content: React.FC<ContentProps> = ({ feeds }) => {
                             component="img"
                             image={image.url}
                             alt={image.altText}
-                            sx={{ borderRadius: 2, objectFit: 'cover', maxHeight: 200 }}
+                            sx={{
+                              borderRadius: 2,
+                              objectFit: 'cover',
+                              maxHeight: 200,
+                            }}
                           />
                         </Grid>
                       ))}
@@ -117,18 +145,26 @@ const Content: React.FC<ContentProps> = ({ feeds }) => {
                 {/* Render tags */}
                 <Box marginTop={1}>
                   {feed.tags.map((tag, tagIndex) => (
-                    <Typography key={tagIndex} variant="caption" color="primary" sx={{ marginRight: 1 }}>
+                    <Typography
+                      key={tagIndex}
+                      variant="caption"
+                      color="primary"
+                      sx={{ marginRight: 1 }}
+                    >
                       #{tag}
                     </Typography>
                   ))}
                 </Box>
               </Box>
             </CardContent>
-            {/* Actions (like, retweet, reply, share) */}
+            {/* Actions (like, retweet, reply, save) */}
             <Grid container spacing={2} sx={{ padding: 1 }}>
               <Grid item>
                 <IconButton size="small">
                   <ChatBubbleOutlineIcon fontSize="small" />
+                  <Typography variant="caption" sx={{ marginLeft: 1 }}>
+                    {feed.reviews.length}
+                  </Typography>
                 </IconButton>
               </Grid>
               <Grid item>
@@ -139,11 +175,17 @@ const Content: React.FC<ContentProps> = ({ feeds }) => {
               <Grid item>
                 <IconButton size="small">
                   <FavoriteIcon fontSize="small" />
+                  <Typography variant="caption" sx={{ marginLeft: 1 }}>
+                    {feed.likes.length}
+                  </Typography>
                 </IconButton>
               </Grid>
               <Grid item>
                 <IconButton size="small">
-                  <ShareIcon fontSize="small" />
+                  <BookmarkIcon fontSize="small" />
+                  <Typography variant="caption" sx={{ marginLeft: 1 }}>
+                    {feed.reviews.length}
+                  </Typography>
                 </IconButton>
               </Grid>
             </Grid>
