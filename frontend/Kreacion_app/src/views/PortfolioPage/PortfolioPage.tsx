@@ -1,15 +1,13 @@
 import React from 'react';
 
-import Main from 'layouts/Main';
 import Container from 'components/Container';
 import { Folio } from './components';
 
+
 const PortfolioPage = (): JSX.Element => (
-  <Main colorInvert={true}>
-    <Container>
-      <Folio />
-    </Container>
-  </Main>
+  <Container colorInvert={true}>
+    <Folio />
+  </Container>
 );
 
 export default PortfolioPage;

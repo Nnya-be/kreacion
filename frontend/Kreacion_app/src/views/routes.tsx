@@ -170,7 +170,7 @@ const routes = [
     ),
   },
   {
-    path: '/portfolio-page',
+    path: '/profile-page',
     renderer: (params = {}): JSX.Element => <PortfolioPageView {...params} />,
   },
   {
