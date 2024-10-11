@@ -28,12 +28,12 @@ const Download = (): JSX.Element => {
         alignItems={{ xs: 'flex-start', sm: 'center' }}
         flexDirection={{ xs: 'column', sm: 'row' }}
       >
-        <Box>
+        {/* <Box>
           <Typography fontWeight={700} variant={'h6'} gutterBottom>
             Apply in 15 minutes
           </Typography>
           <Typography>Get your dream mobile app without the hassle.</Typography>
-        </Box>
+        </Box> */}
         <Box display="flex" marginTop={{ xs: 2, md: 0 }}>
           <Box display="flex" marginTop={1}>
             <Box

@@ -23,9 +23,9 @@ const mock = [
     date: '10 Sep',
   },
   {
-    image: 'https://assets.maccarianagency.com/backgrounds/img4.jpg',
-    description: 'At vero eos et accusamus et iusto odio dignissimos ducimus',
-    title: 'Sed ut perspiciatis',
+    image: 'https://assets.vogue.com/photos/66df531e47082bb70b75d469/4:3/w_960,c_limit/GettyImages-2159049500.jpg',
+    description: 'Shop Chioma Nnamdis edit',
+    title: 'Clothing',
     tags: ['UX', 'Design', 'Themes', 'Photography'],
     author: {
       name: 'Jhon Anderson',
@@ -34,11 +34,11 @@ const mock = [
     date: '02 Aug',
   },
   {
-    image: 'https://assets.maccarianagency.com/backgrounds/img2.jpg',
+    image: 'https://assets.vogue.com/photos/67014d44f74955847bda4b75/4:3/w_1920,c_limit/BLU_A99052540.jpg',
     description:
-      '',
-    title: 'Unde omnis iste natus',
-    tags: ['UX', 'Design', 'Themes', 'Photography'],
+      'Kim Kardashian kindly reminds us of her name',
+    title: 'Fashion',
+    tags: ['Fashion', 'Design', 'Themes', 'Photography'],
     author: {
       name: 'Chary Smith',
       avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',

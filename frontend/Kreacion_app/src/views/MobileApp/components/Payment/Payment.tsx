@@ -89,7 +89,7 @@ const mock = [
   {
     title: 'Brand awareness',
     subtitle:
-      'We bring over 2,500 journalists from the world’s leading publications to TheFront. They’re part of the reason why the event has a global reach of over three billion. We can also work with you on bespoke content packages that will tell your story on a global scale.',
+      'We bring over 2,500 journalists from the world’s leading publications to Kreacion. They’re part of the reason why the event has a global reach of over three billion. We can also work with you on bespoke content packages that will tell your story on a global scale.',
     icon: (
       <svg
         width={40}
@@ -184,7 +184,7 @@ const Payment = (): JSX.Element => {
       <Box marginBottom={4}>
         <Typography
           sx={{
-            textTransform: 'uppercase',
+            textTransform: 'capitalise',
             fontWeight: 'medium',
           }}
           gutterBottom
@@ -199,17 +199,22 @@ const Payment = (): JSX.Element => {
           data-aos={'fade-up'}
           gutterBottom
           sx={{
+            textAlign: 'center',
+            hyphens: 'auto',
             fontWeight: 700,
           }}
         >
-          Creating remarkable opportunity for tech companies to exhibit at
-          Italy's financial capital Milan.
+          Creating remarkable opportunity for fashion designers to exhibit and
+          market their products.
         </Typography>
         <Typography
           variant="h6"
           align={'center'}
           color={'text.secondary'}
           data-aos={'fade-up'}
+          sx={{textAlign:'center',
+            hyphens:'auto',
+          }}
         >
           Our mission is to help you grow your business, meet and connect with
           people who share your passions.
